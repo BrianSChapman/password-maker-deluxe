@@ -14,17 +14,35 @@ if (userLength < 8 || userLength > 128) {
   window.alert("Sorry friend! Password must be between 8 and 128 characters.")
   return
  } 
-}
-  if (confirm("would you like to use lower case letters in it?")) { 
-    Lower++;  
-  }  
+
+ var userLowercase = window.confirm("would you like to use lower case letters in it?");
+
+ if (userLowercase === true) {
+  Lower++;
+ } 
+
+ var userUppercase = window.confirm("You cool with uppercase letters?");
+
+ if (userUppercase === true) {
+  Upper++;
+ }
+
+var userNumeric = window.confirm("How about random numbers? You a random numbers type?");
  
+if (userNumeric === true) {
+  Numeric++;
+}
 
-  // window.confirm("You cool with uppercase letters?");
-  // window.confirm("How about random numbers? You a random numbers type?");
-  // window.confirm("You want special, fancy characters?");
+var userSpecial = window.confirm("You want special, fancy characters?");
 
+if (userSpecial === true) {
+  Special++;
+}
+var lowerCaseList = ( "a" , "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z")
+var upperCaseList = ( "A" , "B" , "C" , "D" , "E" , "F" , "G" , "H" , "I" , "J" , "K" , "L" , "M" , "N" , "O" , "P" , "Q" , "R" , "S" , "T" , "U" , "V" , "W" , "X" , "Y" , "Z")
+var specialCharacters = ( "@" , "#" , "$" , "%" , "^" , "&" , "*")
 
+}
 
 var characterLength = function getrandomInt(min, max) {
   min = Math.ceil(8);
