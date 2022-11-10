@@ -1,11 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var Upper = 0;
-var Lower = 0;
-var Special = 0;
-var Numeric = 0;
 
-
+ function getrandomInt(min, max) {
+    return Math.floor(Math.random()) * ((max - min) + min)
+ }
 function generatePassword() {
 
   var userLength = window.prompt("Please choose a password length, new friend!")  
@@ -16,39 +14,40 @@ if (userLength < 8 || userLength > 128) {
  } 
 
  var userLowercase = window.confirm("would you like to use lower case letters in it?");
-
- if (userLowercase === true) {
-  Lower++;
- } 
-
- var userUppercase = window.confirm("You cool with uppercase letters?");
-
- if (userUppercase === true) {
-  Upper++;
- }
-
+var userUppercase = window.confirm("You cool with uppercase letters?");
 var userNumeric = window.confirm("How about random numbers? You a random numbers type?");
- 
-if (userNumeric === true) {
-  Numeric++;
-}
+ var userSpecial = window.confirm("You want special, fancy characters? You know you do.");
 
-var userSpecial = window.confirm("You want special, fancy characters?");
 
-if (userSpecial === true) {
-  Special++;
-}
 var lowerCaseList = ( "a" , "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z")
 var upperCaseList = ( "A" , "B" , "C" , "D" , "E" , "F" , "G" , "H" , "I" , "J" , "K" , "L" , "M" , "N" , "O" , "P" , "Q" , "R" , "S" , "T" , "U" , "V" , "W" , "X" , "Y" , "Z")
-var specialCharacters = ( "@" , "#" , "$" , "%" , "^" , "&" , "*")
+var specialCharacters = ( "!" , "@" , "#" , "$" , "%" , "^" , "&" , "*")
+var numbersList = ("0" , "1" , "2" , "3" , "4" , "5" , "6" , "7" , "8" , "9")
 
+var randomPile = []
+
+if (userLowercase === true) {
+  randomPile.push(lowerCaseList)
 }
 
-var characterLength = function getrandomInt(min, max) {
-  min = Math.ceil(8);
-  max = Math.floor(128);
-  return Math.floor(Math.random()) * ((max - min) + min);
+if (userUppercase === true) {
+  randomPile.push(upperCaseList)
 }
+
+if (userNumeric === true) {
+  randomPile.push(numbersList)
+}
+
+if (userSpecial === true) {
+  randomPile.push(specialCharacters)
+}
+
+// var randomPileGenerator = ""
+
+//   for (var i = 0; i <userLength, i++) {
+//     var
+  } 
+
 
 // Write password to the #password input
 function writePassword() {
@@ -61,3 +60,4 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
