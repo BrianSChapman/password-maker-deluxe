@@ -27,6 +27,7 @@ To better understand some of the functions, loops, and math aspects needed to ge
 - Stack Overflow : https://stackoverflow.com/questions/9719570/generate-random-password-string-with-requirements-in-javascript
 - mdn web docs : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat 
 - W3 Schools : https://www.w3schools.com/js/js_random.asp & https://www.w3schools.com/js/js_math.asp 
+- I used this video as a reference and to assist in math/function issues I was running into : https://www.youtube.com/watch?v=JheVaV6bPvE 
 
 I also utilized my peers and study materials to try and better understand how to approach this.
 
