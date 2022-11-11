@@ -33,10 +33,10 @@ var userNumeric = window.confirm("How about random numbers? You a random numbers
  var userSpecial = window.confirm("You want special, fancy characters? You know you do.");
 
 
-var lowerCaseList = ( "a" , "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z")
-var upperCaseList = ( "A" , "B" , "C" , "D" , "E" , "F" , "G" , "H" , "I" , "J" , "K" , "L" , "M" , "N" , "O" , "P" , "Q" , "R" , "S" , "T" , "U" , "V" , "W" , "X" , "Y" , "Z")
-var specialCharacters = ( "!" , "@" , "#" , "$" , "%" , "^" , "&" , "*")
-var numbersList = ("0" , "1" , "2" , "3" , "4" , "5" , "6" , "7" , "8" , "9")
+var lowerCaseList = ["a" , "b" , "c" , "d" , "e" , "f" , "g" , "h" , "i" , "j" , "k" , "l" , "m" , "n" , "o" , "p" , "q" , "r" , "s" , "t" , "u" , "v" , "w" , "x" , "y" , "z"]
+var upperCaseList = ["A" , "B" , "C" , "D" , "E" , "F" , "G" , "H" , "I" , "J" , "K" , "L" , "M" , "N" , "O" , "P" , "Q" , "R" , "S" , "T" , "U" , "V" , "W" , "X" , "Y" , "Z"]
+var specialCharacters = ["!" , "@" , "#" , "$" , "%" , "^" , "&" , "*"]
+var numbersList = ["0" , "1" , "2" , "3" , "4" , "5" , "6" , "7" , "8" , "9"]
 
 var randomUserchoices = []
 
@@ -59,7 +59,8 @@ if (userNumeric === true) {
   if (randomUserchoices.length === 0) {
     randomUserchoices.push(numbersList)
   }
-// var completedPassword = randomUserchoices[Math.floor(Math.random()*randomUserchoices.length)];
+
+var completedPassword = randomUserchoices[Math.floor(Math.random()*randomUserchoices.length)];
 
 var completedPassword  = ""
 
