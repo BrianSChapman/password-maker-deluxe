@@ -1,18 +1,18 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
-//  function randomInt(min, max) {
-//     if (!max) {
-//       max = min
-//       min = 0
-//     }
+ function randomInteger(min, max) {
+    if (!max) {
+      max = min
+      min = 0
+    }
 
-// var rand = Math.random()
-// return Math.floor(min*(1 - rand) + rand*max)
-// }
-// function gimmeRandom(list) {
-// return list[randomInt(list.length)]
-// }
+var rand = Math.random()
+return Math.floor(min*(1 - rand) + rand*max)
+}
+function gimmeRandom(list) {
+return list[randomInteger(list.length)]
+}
 
 function generatePassword() {
 
@@ -61,17 +61,15 @@ if (userNumeric === true) {
   }
 // var completedPassword = randomUserchoices[Math.floor(Math.random()*randomUserchoices.length)];
 
+var completedPassword  = ""
 
-  
-// var completedPassword  = ""
+  for (var i = 0; i < userLength, i++;) {
+     var randomizedList = gimmeRandom(randomUserchoices); 
+    var randomizedCharacter = gimmeRandom(randomizedList);
+    completedPassword += randomizedCharacter
+    } 
 
-//   for (var i = 0; i < userLength, i++;) {
-//      var randomizedList = gimmeRandom(randomUserchoices); 
-//     var randomizedCharacter = gimmeRandom(randomizedList);
-//     completedPassword += randomizedCharacter
-//     } 
-
-// return completedPassword
+return completedPassword
 
 
 }
