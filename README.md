@@ -20,14 +20,15 @@ When the page is opened, click the Generate Password button. You should be promp
 
 ## Credits
  
-To better understand some of the functions and loops needed to get this up and running, I touched on a handful of websites:
+To better understand some of the functions, loops, and math aspects needed to get this up and running, I touched on a handful of websites:
 
-- geeksforgeeks
-- CSS Tricks
-- Stack Overflow
-- mdn web docs
+- geeksforgeeks : https://www.geeksforgeeks.org/how-to-select-a-random-element-from-array-in-javascript/
+- CSS Tricks : https://css-tricks.com/snippets/javascript/select-random-item-array/
+- Stack Overflow : https://stackoverflow.com/questions/9719570/generate-random-password-string-with-requirements-in-javascript
+- mdn web docs : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat 
+- W3 Schools : https://www.w3schools.com/js/js_random.asp & https://www.w3schools.com/js/js_math.asp 
 
-I also got advice from my peers in study group.
+I also utilized my peers and study materials to try and better understand how to approach this.
 
 ## License
 
