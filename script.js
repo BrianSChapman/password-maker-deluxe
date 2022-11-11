@@ -67,7 +67,9 @@ var completedPassword  = ""
   for (var i = 0; i < userLength, i++;) {
      var randomizedList = gimmeRandom(randomUserchoices); 
     var randomizedCharacter = gimmeRandom(randomizedList);
-    completedPassword += randomizedCharacter
+    console.log(randomi)
+    // completedPassword += randomizedCharacter
+  
     } 
 
 return completedPassword
