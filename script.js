@@ -1,14 +1,28 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
- function getrandomInt(min, max) {
-    return Math.floor(Math.random()) * ((max - min) + min)
- }
+//  function randomInt(min, max) {
+//     if (!max) {
+//       max = min
+//       min = 0
+//     }
+
+// var rand = Math.random()
+// return Math.floor(min*(1 - rand) + rand*max)
+// }
+// function gimmeRandom(list) {
+// return list[randomInt(list.length)]
+// }
+
 function generatePassword() {
 
-  var userLength = window.prompt("Please choose a password length, new friend!")  
+  var userLength = window.prompt("Please choose a password length, new friend!") 
+  
+  if (!userLength) {
+    return;
+  }
 
-if (userLength < 8 || userLength > 128) {
+  if (userLength < 8 || userLength > 128) {
   window.alert("Sorry friend! Password must be between 8 and 128 characters.")
   return
  } 
@@ -24,29 +38,44 @@ var upperCaseList = ( "A" , "B" , "C" , "D" , "E" , "F" , "G" , "H" , "I" , "J" 
 var specialCharacters = ( "!" , "@" , "#" , "$" , "%" , "^" , "&" , "*")
 var numbersList = ("0" , "1" , "2" , "3" , "4" , "5" , "6" , "7" , "8" , "9")
 
-var randomPile = []
+var randomUserchoices = []
 
 if (userLowercase === true) {
-  randomPile.push(lowerCaseList)
+  randomUserchoices.push(lowerCaseList)
 }
 
 if (userUppercase === true) {
-  randomPile.push(upperCaseList)
+  randomUserchoices.push(upperCaseList)
 }
 
 if (userNumeric === true) {
-  randomPile.push(numbersList)
+  randomUserchoices.push(numbersList)
+  }
+
+  if (userSpecial === true) {
+    randomUserchoices.push(specialCharacters)
+  }
+
+  if (randomUserchoices.length === 0) {
+    randomUserchoices.push(numbersList)
+  }
+// var completedPassword = randomUserchoices[Math.floor(Math.random()*randomUserchoices.length)];
+
+
+  
+// var completedPassword  = ""
+
+//   for (var i = 0; i < userLength, i++;) {
+//      var randomizedList = gimmeRandom(randomUserchoices); 
+//     var randomizedCharacter = gimmeRandom(randomizedList);
+//     completedPassword += randomizedCharacter
+//     } 
+
+// return completedPassword
+
+
 }
 
-if (userSpecial === true) {
-  randomPile.push(specialCharacters)
-}
-
-// var randomPileGenerator = ""
-
-//   for (var i = 0; i <userLength, i++) {
-//     var
-  } 
 
 
 // Write password to the #password input
